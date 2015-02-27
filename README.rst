@@ -1,7 +1,7 @@
 weekperiod
 ==========
 
-Divides a week into 28 periods.
+Divides a week into 28 periods::
 
     0 is Sunday night
     1 is Monday morning
