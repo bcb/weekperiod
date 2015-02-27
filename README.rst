@@ -69,6 +69,7 @@ Store a list of periods in an `int` column of a database table::
 
     meeting = Meeting()
     meeting.periods = weekperiods_to_int([0, 1, 5])
+    meeting.store()
 
 Then to select only records set for Sunday Evenings::
 
