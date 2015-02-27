@@ -66,9 +66,9 @@ Filtering by weekperiod with sqlalchemy
 ---------------------------------------
 
 Store a compressed int in a database record (see `weekperiods_to_int`).
-Then to select only records set for Sundays:
+Then to select only records set for Sunday Evenings:
 
 .. sourcecode:: python
 
-    weekperiod = 27 # Sunday evening
-    Book.query.filter(Book.periods.op('&')(weekperiods_to_int([weekperiod])) > 0)
+    # 27 is Sunday evening
+    Book.query.filter(Book.periods.op('&')(weekperiods_to_int([27])) > 0)
