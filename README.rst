@@ -40,7 +40,7 @@ weekperiod_is_monday
     Takes a weekperiod and returns true if it's Monday.
 
 weekperiod_is_tuesday
-    (See weekperiod_is_monday)..
+    See weekperiod_is_monday. These continue for every day of the week.
 
 weekperiod_is_night
     Takes a weekperiod and returns true if it's night.
