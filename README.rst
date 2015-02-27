@@ -65,13 +65,12 @@ weekperiod_is_set(weekperiod, compressed_int)
 Filtering by weekperiod with sqlalchemy
 ---------------------------------------
 
-Store a list of periods in an `int` column of a database table::
+Store a list of periods in an integer column of a database table::
 
     meeting = Meeting()
-    meeting.periods = weekperiods_to_int([0, 1, 5])
+    meeting.periods = weekperiods_to_int([0, 5, 27])
     meeting.store()
 
-Then to select only records set for Sunday Evenings::
+Then to select only records set for Sunday Evenings (27)::
 
-    # 27 is Sunday Evening
     Meeting.query.filter(Meeting.periods.op('&')(weekperiods_to_int([27])) > 0)
