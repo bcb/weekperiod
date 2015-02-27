@@ -77,4 +77,5 @@ Store a list of periods in an integer column of a database table::
 
 Then to select only records set for Sunday Evenings (27)::
 
+```python
     Meeting.query.filter(Meeting.periods.op('&')(weekperiods_to_int([27])) > 0)
