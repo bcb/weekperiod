@@ -1,7 +1,7 @@
 weekperiod
 ==========
 
-Functions to divide a week into 28 periods.
+Divides a week into 28 periods.
 
 Every weekday has 4 periods - morning, afternoon, evening and night::
 
