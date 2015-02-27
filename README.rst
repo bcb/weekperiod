@@ -67,6 +67,10 @@ Filtering by weekperiod with sqlalchemy
 
 Store a list of periods in an integer column of a database table::
 
+    class Meeting(db.Model):
+        id = db.Column(db.Integer, primary_key=True)
+        periods = db.Column(db.Integer, nullable=True)
+
     meeting = Meeting()
     meeting.periods = weekperiods_to_int([0, 5, 27])
     meeting.store()
