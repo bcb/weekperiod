@@ -80,6 +80,7 @@ def weekperiods_to_int(weekperiods):
 
 def weekperiod_is_set(weekperiod, compressed_int):
     """Returns true if a period bit is set in a compressed int"""
+
     return (1 << weekperiod) & compressed_int
 
 

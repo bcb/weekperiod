@@ -4,7 +4,7 @@
 from unittest import TestCase
 from datetime import datetime
 
-from app.period import *
+from weekperiod import *
 
 class TestPeriod(TestCase):
     #pylint:disable=no-init
