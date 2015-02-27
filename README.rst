@@ -77,7 +77,7 @@ Store a list of periods in an integer column of a database table:
     meeting.periods = weekperiods_to_int([0, 5, 27])
     meeting.store()
 
-Then use bitwise operation to select only records for Sunday Evenings (27):
+Then select only records for Sunday Evenings (27) using bitwise `&`:
 
 .. sourcecode:: python
 
