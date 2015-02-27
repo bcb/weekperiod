@@ -3,8 +3,6 @@ weekperiod
 
 Divides a week into 28 periods.
 
-Every weekday has 4 periods - morning, afternoon, evening and night::
-
     0 is Sunday night
     1 is Monday morning
     2 is Monday afternoon
@@ -13,6 +11,9 @@ Every weekday has 4 periods - morning, afternoon, evening and night::
     5 is Tuesday morning
     ...
     27 is Sunday evening
+
+Functions
+---------
 
 date_to_dayperiod
     Takes a date and returns 0 (morning), 1 (afternoon), 2 (evening) or 3 (night).
@@ -39,7 +40,7 @@ weekperiod_is_monday
     Takes a weekperiod (0-27) and returns true if it's Monday.
 
 weekperiod_is_tuesday
-    ...
+    (See weekperiod_is_monday)..
 
 weekperiod_is_night
     Takes a weekperiod (0-27) and returns true if it's night.
