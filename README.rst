@@ -14,30 +14,49 @@ Every weekday has 4 periods - morning, afternoon, evening and night::
     ...
     27 is Sunday evening
 
-date_to_dayperiod(date=None)
+date_to_dayperiod
     Takes a date and returns 0 (morning), 1 (afternoon), 2 (evening) or 3 (night).
 
-date_to_weekperiod(date=None)
+date_to_weekperiod
     Takes a date and returns the period of the week, (0-27).
 
-weekperiod_to_dayperiod(weekperiod)
+weekperiod_to_dayperiod
+    Takes a weekperiod (0-27) and returns the period of the day (0-3).
 
-weekperiod_to_dayperiodname(weekperiod)
-weekperiod_to_weekday(weekperiod)
-weekperiod_to_weekdayname(weekperiod)
-weekperiod_to_string(weekperiod)
+weekperiod_to_dayperiodname
+    Takes a weekperiod (0-27) and returns 'Morning', 'Afternoon' ..
 
-weekperiod_is_monday(weekperiod)
-weekperiod_is_tuesday(weekperiod)
-weekperiod_is_wednesday(weekperiod)
-weekperiod_is_thursday(weekperiod)
-weekperiod_is_friday(weekperiod)
-weekperiod_is_saturday(weekperiod)
-weekperiod_is_sunday(weekperiod)
-weekperiod_is_night(weekperiod)
-weekperiod_is_morning(weekperiod)
-weekperiod_is_afternoon(weekperiod)
-weekperiod_is_evening(weekperiod)
+weekperiod_to_weekday
+    Takes a weekperiod (0-27) and 0-6 (0 being Monday, 6 being Sunday)
+
+weekperiod_to_weekdayname
+    Takes a weekperiod (0-27) and returns 'Monday', 'Tuesday' ..
+
+weekperiod_to_string
+    Takes a weekperiod (0-27) and returns 'Sunday Night', 'Monday Morning' ..
+
+weekperiod_is_monday
+    Takes a weekperiod (0-27) and returns true if it's Monday.
+
+weekperiod_is_tuesday
+    ...
+
+weekperiod_is_night
+    Takes a weekperiod (0-27) and returns true if it's night.
+
+weekperiod_is_morning
+    Takes a weekperiod (0-27) and returns true if it's morning.
+
+weekperiod_is_afternoon
+    Takes a weekperiod (0-27) and returns true if it's afternoon.
+
+weekperiod_is_evening
+    Takes a weekperiod (0-27) and returns true if it's evening.
 
 weekperiods_to_int(weekperiods)
+    Takes a list of weekperiods and returns them in a 4-byte int suitable for
+    storing.
+
 weekperiod_is_set(weekperiod, compressed_int)
+    Takes an weekperiod and returns true if the bit is set in compressed_int
+    (see weekperiods_to_int).
