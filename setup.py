@@ -1,7 +1,10 @@
-#!/usr/bin/env python
 """setup.py"""
+#pylint:disable=line-too-long
 
-from setuptools import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup #pylint:disable=import-error,no-name-in-module
 
 setup(
     name='weekperiod',
