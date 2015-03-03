@@ -30,7 +30,7 @@ def date_to_weekperiod(date=None):
     if date is None:
         date = datetime.now()
 
-    return (date.weekday() * 4) + date_to_dayperiod(date)
+    return floor((date.weekday() * 4) + date_to_dayperiod(date))
 
 
 def weekperiod_to_dayperiod(weekperiod):
