@@ -1,10 +1,11 @@
-"""promo_test.py"""
+"""test_weekperiod.py"""
 #pylint:disable=missing-docstring,line-too-long,wildcard-import,unused-wildcard-import
 
-from unittest import TestCase
+from unittest import TestCase, main
 from datetime import datetime
 
 from weekperiod import *
+
 
 class TestPeriod(TestCase):
     #pylint:disable=no-init
@@ -147,3 +148,7 @@ class TestPeriod(TestCase):
         self.assertFalse(weekperiod_is_evening(4))
         self.assertFalse(weekperiod_is_evening(5))
         self.assertTrue(weekperiod_is_evening(27))
+
+
+if __name__ == '__main__':
+    main()

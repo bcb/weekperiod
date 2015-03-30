@@ -20,7 +20,7 @@ def date_to_dayperiod(date=None):
     if date is None:
         date = datetime.now()
 
-    return floor(date.hour / 6)
+    return int(floor(date.hour / 6))
 
 
 def date_to_weekperiod(date=None):
@@ -30,13 +30,13 @@ def date_to_weekperiod(date=None):
     if date is None:
         date = datetime.now()
 
-    return floor((date.weekday() * 4) + date_to_dayperiod(date))
+    return int(floor((date.weekday() * 4) + date_to_dayperiod(date)))
 
 
 def weekperiod_to_dayperiod(weekperiod):
     """Returns the dayperiod (0-3) given a weekperiod"""
 
-    return floor(weekperiod % 4)
+    return int(floor(weekperiod % 4))
 
 
 def weekperiod_to_dayperiodname(weekperiod):
@@ -53,7 +53,7 @@ def weekperiod_to_weekday(weekperiod):
     if weekperiod == 0:
         return 6
     else:
-        return floor((weekperiod - 1) / 4)
+        return int(floor((weekperiod - 1) / 4))
 
 
 def weekperiod_to_weekdayname(weekperiod):
