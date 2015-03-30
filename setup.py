@@ -30,6 +30,7 @@ setup(
     description='Divide the week into 28 periods.',
     author='Beau Barker',
     author_email='beauinmelbourne@gmail.com',
+    install_requires=['weekperiod'],
     tests_require=['tox'],
     cmdclass = {'test': Tox},
     )
