@@ -2,12 +2,8 @@
 #pylint:disable=line-too-long
 
 import sys
+from setuptools import setup
 from setuptools.command.test import test as TestCommand
-
-try:
-    from setuptools import setup
-except ImportError:
-    from distutils.core import setup #pylint:disable=import-error,no-name-in-module
 
 class Tox(TestCommand):
     user_options = [('tox-args=', 'a', "Arguments to pass to tox")]
